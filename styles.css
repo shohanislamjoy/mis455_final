@@ -124,6 +124,11 @@ h1 {
     font-size: 16px;
 }
 
+.card-title {
+    color: aqua;
+    font-size: 36px;
+}
+
 
 /* Media Query for Mobile Devices */
 
@@ -149,6 +154,12 @@ h1 {
     .copy-right {
         font-size: 0.9rem;
     }
+    .card-title {
+        color: aqua;
+        font-size: 24px;
+    }
 }
 
-;
+p b {
+    margin: 0;
+}

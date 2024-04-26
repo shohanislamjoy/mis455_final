@@ -4,6 +4,7 @@ var mealsData; // Global variable to store meals data
 
 function searchMeal() {
     text = document.getElementById('search_input').value;
+    document.getElementById('search_input').value = '';
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`)
         .then(res => res.json())
         .then(data => {
@@ -49,9 +50,9 @@ function show_all() {
                                         <div class="card">
                                             <img src="${mealsData[i].strMealThumb}" class="card-img-top img-fluid" alt="${mealsData[i].strMeal}">
                                             <div class="card-body">
-                                                <h5 class="card-title"><b>${mealsData[i].strMeal}</b></h5>
+                                                <h3 class="card-title"><b>${mealsData[i].strMeal}</b></h3>
                                                 <p class="card-text">Category: ${mealsData[i].strCategory}</p>
-                                                <p class="card-text" id="instructions_${i}">${truncateText(mealsData[i].strInstructions,200)}</p>
+                                                <p class="card-text" id="instructions_${i}"><b>Instructions: </b>${truncateText(mealsData[i].strInstructions,200)}</p>
                                                 <a href="#" id="show_link_${i}" onclick="toggleInstructions(${i}); return false;" data-toggle="hidden">Show Full Instructions</a>
                                             </div>
                                         </div>
