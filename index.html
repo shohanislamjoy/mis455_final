@@ -4,11 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Recipes House</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
 </head>
 
 <body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container">
+                <h1 class="logo">Recipes House</h1>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#aboutus">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.themealdb.com/api/json/v1/1/search.php?">API_check</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/shohanislamjoy">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mt-4">
+        <div class="row justify-content-center">
+            <!-- Center the input display -->
+            <div class="col-md-8">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="search_input" placeholder="Enter the meal name for recipes">
+                    <div class="input-group-append ml-3">
+                        <button class="btn btn_1 form-control" onclick="searchMeal()">Search Recipes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="meal_result" class="row mt-4">
+            <!-- Results will be dynamically inserted here -->
+        </div>
+        <div id="show_all_container" class="row m-4 d-none">
+            <div class="col-md-8 offset-md-2 text-center">
+                <button id="additionalBtn" class="btn btn_1" onclick="show_all()">Show All Recipes</button>
+            </div>
+        </div>
+    </main>
 
+    <section id="footer">
+        <div class="footer-container bg-dark text-white text-center py-3 mt-auto">
+            <div class="brand">
+                <h2><span>Recipes House</span></h2>
+            </div>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="https://www.facebook.com/shohan.islam.000" target="_blank"><img src="https://img.icons8.com/bubbles/50/000000/facebook-new.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://shohanislamjoy.me" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.linkedin.com/in/shohan-islam-joy/" target="_blank"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://github.com/shohanislamjoy" target="_blank"><img src="https://img.icons8.com/stickers/50/000000/github.png" /></a>
+                </div>
+            </div>
+            <div class="address">
+                <p>D-22,R-08,Sector-9,Uttara Dhaka 1230</p>
+                <p>Phone: (123) 456-7890 | Email: info@recipes-house.com</p>
+            </div>
+            <p class="copy-right">Copyright © 2024 Meal Recipes Search App. All rights reserved By Shohan.</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <script src="scripts.js">
+    </script>
 </body>
 
 </html>
